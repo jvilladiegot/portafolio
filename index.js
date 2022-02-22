@@ -10,7 +10,7 @@ app.use(expressLayouts)
 
 
 app.get('/', (req,res) =>{
-    res.send('welcome.ejs')
+    res.render('welcome.ejs')
 })
 
 
