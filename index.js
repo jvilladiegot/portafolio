@@ -2,10 +2,11 @@
 import express from 'express'
 import expressLayouts from 'express-ejs-layouts'
 import dotenv from 'dotenv'
-import path from 'path'
+import * as path from 'path';
 const app = express()
 dotenv.config()
 
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.use(expressLayouts)
 
