@@ -1,19 +1,15 @@
 'use strict'
-const express = require('express') 
-const expressLayouts = require('express-ejs-layouts') 
-const dotenv = require('dotenv') 
-const path = require('path') 
-const app = express()
-dotenv.config()
+import express from 'express';
+import { engine } from 'express-handlebars';
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
-app.use(expressLayouts)
+const app = express();
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
-})
+    res.render('home');
+});
 
-
-
-app.listen(5000, () => console.log(`app listening on port 5000! `))
+app.listen(5000);
