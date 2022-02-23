@@ -1,8 +1,8 @@
 'use strict'
-import express from 'express'
-import expressLayouts from 'express-ejs-layouts'
-import dotenv from 'dotenv'
-import * as path from 'path';
+const express = require('express') 
+const expressLayouts = require('express-ejs-layouts') 
+const dotenv = require('dotenv') 
+const path = require('path') 
 const app = express()
 dotenv.config()
 
