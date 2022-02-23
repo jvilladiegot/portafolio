@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>jvilladiegot porfolio</h1>
-</body>
-</html>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ profile.email }}</h5>
+        <p class="card-text">{{ profile.linkedin }}</p>
+        <a href="https://github.com/{{profile.github}}" class="btn btn-primary">{{profile.github}}</a>
+    </div>
+</div>
